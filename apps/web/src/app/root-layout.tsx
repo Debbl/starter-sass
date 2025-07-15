@@ -38,7 +38,7 @@ export function getRootLayout(lang: string) {
     return (
       <html lang={lang} suppressHydrationWarning>
         <body>
-          <Providers lang={lang}>{children}</Providers>
+          <Providers lang={lang as any}>{children}</Providers>
         </body>
       </html>
     )

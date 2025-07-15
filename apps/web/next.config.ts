@@ -54,6 +54,8 @@ const nextConfig: NextConfig = {
       }),
     )
 
+    config.watchOptions.ignored = [/node_modules([\\]+|\/)+(?!@workspace)/]
+
     return config
   },
 }
