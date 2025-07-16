@@ -4,13 +4,13 @@
   "version": "0.0.0",
   "private": true,
   "packageManager": "pnpm@10.12.4",
-  "description": "starter next app",
+  "description": "starter sass app",
   "author": "Brendan Dash <me@aiwna.run> (https://github.com/Debbl/)",
   "license": "MIT",
-  "homepage": "https://github.com/Debbl/starter-next-app",
+  "homepage": "https://github.com/Debbl/starter-sass",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Debbl/starter-next-app.git"
+    "url": "https://github.com/Debbl/starter-sass.git"
   },
   "scripts": {
     "dev": "next dev",
@@ -24,10 +24,10 @@
   },
   "dependencies": {
     "@debbl/ahooks": "^0.4.1",
-    "@lingui/core": "^5.3.2",
-    "@lingui/react": "^5.3.2",
-    "@orpc/client": "^1.6.0",
-    "@orpc/server": "^1.6.0",
+    "@lingui/core": "catalog:",
+    "@lingui/react": "catalog:",
+    "@orpc/client": "catalog:",
+    "@orpc/server": "catalog:",
     "@radix-ui/react-slot": "^1.2.3",
     "@radix-ui/react-switch": "^1.2.5",
     "@serwist/next": "^9.0.15",
@@ -42,27 +42,23 @@
     "react-dom": "19.1.0",
     "tailwindcss-animate": "^1.0.7",
     "twl": "0.0.0",
-    "zod": "^3.25.67"
+    "zod": "catalog:"
   },
   "devDependencies": {
     "@debbl/eslint-config": "^3.12.0",
-    "@lingui/cli": "^5.3.2",
-    "@lingui/loader": "^5.3.2",
-    "@lingui/swc-plugin": "^5.5.2",
+    "@lingui/cli": "catalog:",
+    "@lingui/loader": "catalog:",
+    "@lingui/swc-plugin": "catalog:",
     "@next/bundle-analyzer": "^15.3.4",
     "@tailwindcss/postcss": "^4.1.11",
-    "@types/node": "^24.0.10",
+    "@types/node": "catalog:",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "babel-plugin-react-compiler": "latest",
-    "eslint": "^9.30.1",
-    "lint-staged": "^16.1.2",
     "postcss": "^8.5.6",
-    "prettier-plugin-tailwindcss": "^0.6.13",
     "serwist": "^9.0.15",
-    "simple-git-hooks": "^2.13.0",
     "tailwindcss": "^4.1.11",
-    "typescript": "^5.8.3",
+    "typescript": "catalog:",
     "unplugin-auto-import": "^19.3.0"
   }
 }

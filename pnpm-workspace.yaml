@@ -7,3 +7,16 @@ onlyBuiltDependencies:
   - simple-git-hooks
   - '@tailwindcss/oxide'
   - 'unrs-resolver'
+
+catalog:
+  zod: ^3.25.67
+  tsdown: ^0.12.9
+  typescript: ^5.8.3
+  '@types/node': ^24.0.10
+  '@orpc/server': ^1.6.0
+  '@orpc/client': ^1.6.0
+  '@lingui/core': ^5.3.2
+  '@lingui/react': ^5.3.2
+  '@lingui/cli': ^5.3.2
+  '@lingui/loader': ^5.3.2
+  '@lingui/swc-plugin': ^5.5.2

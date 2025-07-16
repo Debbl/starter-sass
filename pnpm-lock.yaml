@@ -4,6 +4,42 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+catalogs:
+  default:
+    '@lingui/cli':
+      specifier: ^5.3.2
+      version: 5.3.2
+    '@lingui/core':
+      specifier: ^5.3.2
+      version: 5.3.2
+    '@lingui/loader':
+      specifier: ^5.3.2
+      version: 5.3.2
+    '@lingui/react':
+      specifier: ^5.3.2
+      version: 5.3.2
+    '@lingui/swc-plugin':
+      specifier: ^5.5.2
+      version: 5.5.2
+    '@orpc/client':
+      specifier: ^1.6.0
+      version: 1.6.0
+    '@orpc/server':
+      specifier: ^1.6.0
+      version: 1.6.0
+    '@types/node':
+      specifier: ^24.0.10
+      version: 24.0.10
+    tsdown:
+      specifier: ^0.12.9
+      version: 0.12.9
+    typescript:
+      specifier: ^5.8.3
+      version: 5.8.3
+    zod:
+      specifier: ^3.25.67
+      version: 3.25.67
+
 importers:
 
   .:
@@ -26,130 +62,28 @@ importers:
       simple-git-hooks:
         specifier: ^2.13.0
         version: 2.13.0
-      tsdown:
-        specifier: ^0.12.9
-        version: 0.12.9(typescript@5.8.3)
-      typescript:
-        specifier: ^5.8.3
-        version: 5.8.3
 
   apps/server:
     dependencies:
-      '@debbl/ahooks':
-        specifier: ^0.4.1
-        version: 0.4.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@lingui/core':
-        specifier: ^5.3.2
+        specifier: 'catalog:'
         version: 5.3.2(@lingui/babel-plugin-lingui-macro@5.3.2(babel-plugin-macros@3.1.0)(typescript@5.8.3))(babel-plugin-macros@3.1.0)
-      '@lingui/react':
-        specifier: ^5.3.2
-        version: 5.3.2(@lingui/babel-plugin-lingui-macro@5.3.2(babel-plugin-macros@3.1.0)(typescript@5.8.3))(babel-plugin-macros@3.1.0)(react@19.1.0)
-      '@orpc/client':
-        specifier: ^1.6.0
-        version: 1.6.0
       '@orpc/server':
-        specifier: ^1.6.0
+        specifier: 'catalog:'
         version: 1.6.0
-      '@radix-ui/react-slot':
-        specifier: ^1.2.3
-        version: 1.2.3(@types/react@19.1.8)(react@19.1.0)
-      '@radix-ui/react-switch':
-        specifier: ^1.2.5
-        version: 1.2.5(@types/react-dom@19.1.6(@types/react@19.1.8))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@serwist/next':
-        specifier: ^9.0.15
-        version: 9.0.15(next@15.3.4(@babel/core@7.26.9)(babel-plugin-macros@3.1.0)(babel-plugin-react-compiler@19.1.0-rc.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(typescript@5.8.3)(webpack@5.97.1)
-      class-variance-authority:
-        specifier: ^0.7.1
-        version: 0.7.1
-      lucide-react:
-        specifier: ^0.525.0
-        version: 0.525.0(react@19.1.0)
-      motion:
-        specifier: 12.6.2
-        version: 12.6.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      next:
-        specifier: ^15.3.4
-        version: 15.3.4(@babel/core@7.26.9)(babel-plugin-macros@3.1.0)(babel-plugin-react-compiler@19.1.0-rc.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      next-themes:
-        specifier: ^0.4.6
-        version: 0.4.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      radix-ui:
-        specifier: ^1.4.2
-        version: 1.4.2(@types/react-dom@19.1.6(@types/react@19.1.8))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      react:
-        specifier: 19.1.0
-        version: 19.1.0
-      react-dom:
-        specifier: 19.1.0
-        version: 19.1.0(react@19.1.0)
-      tailwindcss-animate:
-        specifier: ^1.0.7
-        version: 1.0.7(tailwindcss@4.1.11)
-      twl:
-        specifier: 0.0.0
-        version: 0.0.0
       zod:
-        specifier: ^3.25.67
+        specifier: 'catalog:'
         version: 3.25.67
     devDependencies:
-      '@debbl/eslint-config':
-        specifier: ^3.12.0
-        version: 3.12.0(@types/eslint@9.6.1)(@typescript-eslint/utils@8.35.1(eslint@9.30.1(jiti@2.4.2))(typescript@5.8.3))(eslint-config-prettier@10.1.2(eslint@9.30.1(jiti@2.4.2)))(eslint-import-resolver-node@0.3.9)(eslint@9.30.1(jiti@2.4.2))(tailwindcss@4.1.11)(ts-api-utils@2.1.0(typescript@5.8.3))(typescript@5.8.3)(vitest@3.1.1(@types/debug@4.1.12)(@types/node@24.0.10)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.8.0))
-      '@lingui/cli':
-        specifier: ^5.3.2
-        version: 5.3.2(typescript@5.8.3)
-      '@lingui/loader':
-        specifier: ^5.3.2
-        version: 5.3.2(typescript@5.8.3)(webpack@5.97.1)
-      '@lingui/swc-plugin':
-        specifier: ^5.5.2
-        version: 5.5.2(@lingui/core@5.3.2(@lingui/babel-plugin-lingui-macro@5.3.2(babel-plugin-macros@3.1.0)(typescript@5.8.3))(babel-plugin-macros@3.1.0))(next@15.3.4(@babel/core@7.26.9)(babel-plugin-macros@3.1.0)(babel-plugin-react-compiler@19.1.0-rc.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))
-      '@next/bundle-analyzer':
-        specifier: ^15.3.4
-        version: 15.3.4
-      '@tailwindcss/postcss':
-        specifier: ^4.1.11
-        version: 4.1.11
       '@types/node':
-        specifier: ^24.0.10
+        specifier: 'catalog:'
         version: 24.0.10
-      '@types/react':
-        specifier: ^19.1.8
-        version: 19.1.8
-      '@types/react-dom':
-        specifier: ^19.1.6
-        version: 19.1.6(@types/react@19.1.8)
-      babel-plugin-react-compiler:
-        specifier: latest
-        version: 19.1.0-rc.2
-      eslint:
-        specifier: ^9.30.1
-        version: 9.30.1(jiti@2.4.2)
-      lint-staged:
-        specifier: ^16.1.2
-        version: 16.1.2
-      postcss:
-        specifier: ^8.5.6
-        version: 8.5.6
-      prettier-plugin-tailwindcss:
-        specifier: ^0.6.13
-        version: 0.6.13(prettier@3.5.3)
-      serwist:
-        specifier: ^9.0.15
-        version: 9.0.15(typescript@5.8.3)
-      simple-git-hooks:
-        specifier: ^2.13.0
-        version: 2.13.0
-      tailwindcss:
-        specifier: ^4.1.11
-        version: 4.1.11
+      tsdown:
+        specifier: 'catalog:'
+        version: 0.12.9(typescript@5.8.3)
       typescript:
-        specifier: ^5.8.3
+        specifier: 'catalog:'
         version: 5.8.3
-      unplugin-auto-import:
-        specifier: ^19.3.0
-        version: 19.3.0
 
   apps/web:
     dependencies:
@@ -157,16 +91,16 @@ importers:
         specifier: ^0.4.1
         version: 0.4.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@lingui/core':
-        specifier: ^5.3.2
+        specifier: 'catalog:'
         version: 5.3.2(@lingui/babel-plugin-lingui-macro@5.3.2(babel-plugin-macros@3.1.0)(typescript@5.8.3))(babel-plugin-macros@3.1.0)
       '@lingui/react':
-        specifier: ^5.3.2
+        specifier: 'catalog:'
         version: 5.3.2(@lingui/babel-plugin-lingui-macro@5.3.2(babel-plugin-macros@3.1.0)(typescript@5.8.3))(babel-plugin-macros@3.1.0)(react@19.1.0)
       '@orpc/client':
-        specifier: ^1.6.0
+        specifier: 'catalog:'
         version: 1.6.0
       '@orpc/server':
-        specifier: ^1.6.0
+        specifier: 'catalog:'
         version: 1.6.0
       '@radix-ui/react-slot':
         specifier: ^1.2.3
@@ -211,20 +145,20 @@ importers:
         specifier: 0.0.0
         version: 0.0.0
       zod:
-        specifier: ^3.25.67
+        specifier: 'catalog:'
         version: 3.25.67
     devDependencies:
       '@debbl/eslint-config':
         specifier: ^3.12.0
         version: 3.12.0(@types/eslint@9.6.1)(@typescript-eslint/utils@8.35.1(eslint@9.30.1(jiti@2.4.2))(typescript@5.8.3))(eslint-config-prettier@10.1.2(eslint@9.30.1(jiti@2.4.2)))(eslint-import-resolver-node@0.3.9)(eslint@9.30.1(jiti@2.4.2))(tailwindcss@4.1.11)(ts-api-utils@2.1.0(typescript@5.8.3))(typescript@5.8.3)(vitest@3.1.1(@types/debug@4.1.12)(@types/node@24.0.10)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.8.0))
       '@lingui/cli':
-        specifier: ^5.3.2
+        specifier: 'catalog:'
         version: 5.3.2(typescript@5.8.3)
       '@lingui/loader':
-        specifier: ^5.3.2
+        specifier: 'catalog:'
         version: 5.3.2(typescript@5.8.3)(webpack@5.97.1)
       '@lingui/swc-plugin':
-        specifier: ^5.5.2
+        specifier: 'catalog:'
         version: 5.5.2(@lingui/core@5.3.2(@lingui/babel-plugin-lingui-macro@5.3.2(babel-plugin-macros@3.1.0)(typescript@5.8.3))(babel-plugin-macros@3.1.0))(next@15.3.4(@babel/core@7.26.9)(babel-plugin-macros@3.1.0)(babel-plugin-react-compiler@19.1.0-rc.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))
       '@next/bundle-analyzer':
         specifier: ^15.3.4
@@ -233,7 +167,7 @@ importers:
         specifier: ^4.1.11
         version: 4.1.11
       '@types/node':
-        specifier: ^24.0.10
+        specifier: 'catalog:'
         version: 24.0.10
       '@types/react':
         specifier: ^19.1.8
@@ -244,12 +178,6 @@ importers:
       babel-plugin-react-compiler:
         specifier: latest
         version: 19.1.0-rc.2
-      eslint:
-        specifier: ^9.30.1
-        version: 9.30.1(jiti@2.4.2)
-      lint-staged:
-        specifier: ^16.1.2
-        version: 16.1.2
       postcss:
         specifier: ^8.5.6
         version: 8.5.6
@@ -259,14 +187,11 @@ importers:
       serwist:
         specifier: ^9.0.15
         version: 9.0.15(typescript@5.8.3)
-      simple-git-hooks:
-        specifier: ^2.13.0
-        version: 2.13.0
       tailwindcss:
         specifier: ^4.1.11
         version: 4.1.11
       typescript:
-        specifier: ^5.8.3
+        specifier: 'catalog:'
         version: 5.8.3
       unplugin-auto-import:
         specifier: ^19.3.0
@@ -292,10 +217,6 @@ packages:
 
   '@babel/core@7.26.9':
     resolution: {integrity: sha512-lWBYIrF7qK5+GjY5Uy+/hEgp8OJWOD/rpy74GplYRhEauvbHDeFB8t5hPOZxCZ0Oxf4Cc36tK51/l3ymJysrKw==}
-    engines: {node: '>=6.9.0'}
-
-  '@babel/generator@7.26.9':
-    resolution: {integrity: sha512-kEWdzjOAUMW4hAyrzJ0ZaTOu9OmpyDIQicIh0zg0EEcEkYXZb2TjtBhnHi2ViX7PKwZqF4xwqfAm299/QMP3lg==}
     engines: {node: '>=6.9.0'}
 
   '@babel/generator@7.28.0':
@@ -371,11 +292,6 @@ packages:
   '@babel/helpers@7.26.9':
     resolution: {integrity: sha512-Mz/4+y8udxBKdmzt/UjPACs4G3j5SshJJEFFKxlCGPydG4JAHXxjWjAwjd09tf6oINvl1VfMJo+nB7H2YKQ0dA==}
     engines: {node: '>=6.9.0'}
-
-  '@babel/parser@7.26.9':
-    resolution: {integrity: sha512-81NWa1njQblgZbQHxWHpxxCzNsa3ZwvFqpUg7P+NNUU6f3UU2jBEg4OlF/J6rl8+PQGh1q6/zWScd001YwcA5A==}
-    engines: {node: '>=6.0.0'}
-    hasBin: true
 
   '@babel/parser@7.28.0':
     resolution: {integrity: sha512-jVZGvOxOuNSsuQuLRTh13nU0AogFlw32w/MT+LV6D3sP5WdbW61E77RnkbaO2dUvmPAYrBDJXGn5gGS6tH4j8g==}
@@ -5084,7 +5000,7 @@ snapshots:
 
   '@babel/code-frame@7.26.2':
     dependencies:
-      '@babel/helper-validator-identifier': 7.25.9
+      '@babel/helper-validator-identifier': 7.27.1
       js-tokens: 4.0.0
       picocolors: 1.1.1
 
@@ -5094,14 +5010,14 @@ snapshots:
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@babel/code-frame': 7.26.2
-      '@babel/generator': 7.26.9
+      '@babel/generator': 7.28.0
       '@babel/helper-compilation-targets': 7.26.5
       '@babel/helper-module-transforms': 7.26.0(@babel/core@7.26.9)
       '@babel/helpers': 7.26.9
-      '@babel/parser': 7.26.9
+      '@babel/parser': 7.28.0
       '@babel/template': 7.26.9
       '@babel/traverse': 7.26.9
-      '@babel/types': 7.26.9
+      '@babel/types': 7.28.1
       convert-source-map: 2.0.0
       debug: 4.4.1
       gensync: 1.0.0-beta.2
@@ -5109,14 +5025,6 @@ snapshots:
       semver: 6.3.1
     transitivePeerDependencies:
       - supports-color
-
-  '@babel/generator@7.26.9':
-    dependencies:
-      '@babel/parser': 7.26.9
-      '@babel/types': 7.26.9
-      '@jridgewell/gen-mapping': 0.3.8
-      '@jridgewell/trace-mapping': 0.3.25
-      jsesc: 3.1.0
 
   '@babel/generator@7.28.0':
     dependencies:
@@ -5128,7 +5036,7 @@ snapshots:
 
   '@babel/helper-annotate-as-pure@7.25.9':
     dependencies:
-      '@babel/types': 7.26.9
+      '@babel/types': 7.28.1
 
   '@babel/helper-compilation-targets@7.26.5':
     dependencies:
@@ -5154,14 +5062,14 @@ snapshots:
   '@babel/helper-member-expression-to-functions@7.25.9':
     dependencies:
       '@babel/traverse': 7.26.9
-      '@babel/types': 7.26.9
+      '@babel/types': 7.28.1
     transitivePeerDependencies:
       - supports-color
 
   '@babel/helper-module-imports@7.25.9':
     dependencies:
       '@babel/traverse': 7.26.9
-      '@babel/types': 7.26.9
+      '@babel/types': 7.28.1
     transitivePeerDependencies:
       - supports-color
 
@@ -5169,14 +5077,14 @@ snapshots:
     dependencies:
       '@babel/core': 7.26.9
       '@babel/helper-module-imports': 7.25.9
-      '@babel/helper-validator-identifier': 7.25.9
+      '@babel/helper-validator-identifier': 7.27.1
       '@babel/traverse': 7.26.9
     transitivePeerDependencies:
       - supports-color
 
   '@babel/helper-optimise-call-expression@7.25.9':
     dependencies:
-      '@babel/types': 7.26.9
+      '@babel/types': 7.28.1
 
   '@babel/helper-plugin-utils@7.26.5': {}
 
@@ -5192,7 +5100,7 @@ snapshots:
   '@babel/helper-skip-transparent-expression-wrappers@7.25.9':
     dependencies:
       '@babel/traverse': 7.26.9
-      '@babel/types': 7.26.9
+      '@babel/types': 7.28.1
     transitivePeerDependencies:
       - supports-color
 
@@ -5209,11 +5117,7 @@ snapshots:
   '@babel/helpers@7.26.9':
     dependencies:
       '@babel/template': 7.26.9
-      '@babel/types': 7.26.9
-
-  '@babel/parser@7.26.9':
-    dependencies:
-      '@babel/types': 7.26.9
+      '@babel/types': 7.28.1
 
   '@babel/parser@7.28.0':
     dependencies:
@@ -5234,16 +5138,16 @@ snapshots:
   '@babel/template@7.26.9':
     dependencies:
       '@babel/code-frame': 7.26.2
-      '@babel/parser': 7.26.9
-      '@babel/types': 7.26.9
+      '@babel/parser': 7.28.0
+      '@babel/types': 7.28.1
 
   '@babel/traverse@7.26.9':
     dependencies:
       '@babel/code-frame': 7.26.2
-      '@babel/generator': 7.26.9
-      '@babel/parser': 7.26.9
+      '@babel/generator': 7.28.0
+      '@babel/parser': 7.28.0
       '@babel/template': 7.26.9
-      '@babel/types': 7.26.9
+      '@babel/types': 7.28.1
       debug: 4.4.1
       globals: 11.12.0
     transitivePeerDependencies:
@@ -5756,8 +5660,8 @@ snapshots:
 
   '@jridgewell/source-map@0.3.6':
     dependencies:
-      '@jridgewell/gen-mapping': 0.3.8
-      '@jridgewell/trace-mapping': 0.3.25
+      '@jridgewell/gen-mapping': 0.3.12
+      '@jridgewell/trace-mapping': 0.3.29
 
   '@jridgewell/sourcemap-codec@1.5.0': {}
 
@@ -5777,7 +5681,7 @@ snapshots:
     dependencies:
       '@babel/core': 7.26.9
       '@babel/runtime': 7.26.0
-      '@babel/types': 7.26.9
+      '@babel/types': 7.28.1
       '@lingui/conf': 5.3.2(typescript@5.8.3)
       '@lingui/core': 5.3.2(@lingui/babel-plugin-lingui-macro@5.3.2(babel-plugin-macros@3.1.0)(typescript@5.8.3))(babel-plugin-macros@3.1.0)
       '@lingui/message-utils': 5.3.2
@@ -5790,10 +5694,10 @@ snapshots:
   '@lingui/cli@5.3.2(typescript@5.8.3)':
     dependencies:
       '@babel/core': 7.26.9
-      '@babel/generator': 7.26.9
-      '@babel/parser': 7.26.9
+      '@babel/generator': 7.28.0
+      '@babel/parser': 7.28.0
       '@babel/runtime': 7.26.0
-      '@babel/types': 7.26.9
+      '@babel/types': 7.28.1
       '@lingui/babel-plugin-extract-messages': 5.3.2
       '@lingui/babel-plugin-lingui-macro': 5.3.2(babel-plugin-macros@3.1.0)(typescript@5.8.3)
       '@lingui/conf': 5.3.2(typescript@5.8.3)
@@ -7948,7 +7852,7 @@ snapshots:
   eslint-plugin-react-compiler@19.1.0-rc.2(eslint@9.30.1(jiti@2.4.2)):
     dependencies:
       '@babel/core': 7.26.9
-      '@babel/parser': 7.26.9
+      '@babel/parser': 7.28.0
       '@babel/plugin-proposal-private-methods': 7.18.6(@babel/core@7.26.9)
       eslint: 9.30.1(jiti@2.4.2)
       hermes-parser: 0.25.1
@@ -9816,7 +9720,7 @@ snapshots:
 
   terser-webpack-plugin@5.3.11(webpack@5.97.1):
     dependencies:
-      '@jridgewell/trace-mapping': 0.3.25
+      '@jridgewell/trace-mapping': 0.3.29
       jest-worker: 27.5.1
       schema-utils: 4.3.0
       serialize-javascript: 6.0.2
