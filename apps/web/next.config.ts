@@ -14,6 +14,7 @@ const withSerwist = withSerwistInit({
 })
 
 const nextConfig: NextConfig = {
+  output: 'standalone',
   experimental: {
     reactCompiler: true,
     swcPlugins: [['@lingui/swc-plugin', {}]],

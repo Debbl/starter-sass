@@ -24,6 +24,7 @@
     "build": "tsdown",
     "db:gen": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
@@ -31,10 +32,13 @@
     "@lingui/core": "catalog:",
     "@orpc/server": "catalog:",
     "@workspace/env": "workspace:*",
+    "better-sqlite3": "^12.2.0",
     "drizzle-orm": "^0.44.3",
+    "react": "catalog:",
     "zod": "catalog:"
   },
   "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
     "@types/node": "catalog:",
     "drizzle-kit": "^0.31.4",
     "tsdown": "catalog:",

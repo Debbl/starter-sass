@@ -1,23 +1,27 @@
 packages:
-  - 'apps/*'
-  - 'packages/*'
+  - apps/*
+  - packages/*
+
+catalog:
+  '@lingui/cli': ^5.3.3
+  '@lingui/core': ^5.3.3
+  '@lingui/loader': ^5.3.3
+  '@lingui/react': ^5.3.3
+  '@lingui/swc-plugin': ^5.5.2
+  '@orpc/client': ^1.7.1
+  '@orpc/server': ^1.7.1
+  '@orpc/tanstack-query': ^1.7.1
+  '@types/node': ^24.0.14
+  react: ^19.1.0
+  react-dom: ^19.1.0
+  tsdown: ^0.12.9
+  typescript: ^5.8.3
+  zod: ^4.0.5
+
 onlyBuiltDependencies:
+  - '@tailwindcss/oxide'
+  - better-sqlite3
   - esbuild
   - sharp
   - simple-git-hooks
-  - '@tailwindcss/oxide'
-  - 'unrs-resolver'
-
-catalog:
-  zod: ^4.0.5
-  tsdown: ^0.12.9
-  typescript: ^5.8.3
-  '@types/node': ^24.0.14
-  '@orpc/server': ^1.7.1
-  '@orpc/client': ^1.7.1
-  '@orpc/tanstack-query': ^1.7.1
-  '@lingui/core': ^5.3.3
-  '@lingui/react': ^5.3.3
-  '@lingui/cli': ^5.3.3
-  '@lingui/loader': ^5.3.3
-  '@lingui/swc-plugin': ^5.5.2
+  - unrs-resolver

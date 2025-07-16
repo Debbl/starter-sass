@@ -5,6 +5,7 @@
     "dev": {},
     "i18n:extract": {},
     "db:gen": {},
-    "db:migrate": {}
+    "db:migrate": {},
+    "db:studio": {}
   }
 }
