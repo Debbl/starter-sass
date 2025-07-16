@@ -2,7 +2,7 @@
 import { LangSwitcher } from '~/components/lang-switcher'
 import { ThemeSwitcher } from '~/components/theme-switcher'
 import { orpc } from '~/lib/orpc'
-import { Counter } from './counter'
+import Counter from '../components/counter'
 
 export default function Home() {
   const { data } = useQuery(orpc.hi.queryOptions())

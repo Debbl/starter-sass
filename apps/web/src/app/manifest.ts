@@ -4,9 +4,9 @@ export const dynamic = 'force-static'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Starter Next App',
-    short_name: 'Starter Next App',
-    description: 'A Starter Next App built with Next.js',
+    name: 'Starter Sass App',
+    short_name: 'Starter Sass App',
+    description: 'A Starter Sass App built with Sass',
     start_url: '/',
     display: 'standalone',
     background_color: '#ffffff',
