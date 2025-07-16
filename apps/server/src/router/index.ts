@@ -1,11 +1,11 @@
 import { os } from '@orpc/server'
 
-const test = os.handler(async () => {
+const hi = os.handler(async () => {
   return 'hi'
 })
 
 export const router = {
-  test,
+  hi,
 }
 
 export type Router = typeof router

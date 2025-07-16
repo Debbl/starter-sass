@@ -21,13 +21,8 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "dev": "tsdown --watch",
-    "i18n:extract": "lingui extract",
     "build": "tsdown",
-    "build:analyze": "ANALYZE=true next build",
-    "start": "next start",
-    "typecheck": "tsc --noEmit",
-    "lint": "eslint",
-    "lint:fix": "eslint --fix"
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@lingui/core": "catalog:",

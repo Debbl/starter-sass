@@ -15,7 +15,7 @@
   "scripts": {
     "dev": "next dev",
     "i18n:extract": "lingui extract",
-    "build": "pnpm compile && next build",
+    "build": "next build",
     "build:analyze": "ANALYZE=true next build",
     "start": "next start",
     "typecheck": "tsc --noEmit",

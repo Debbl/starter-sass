@@ -13,10 +13,9 @@
     "url": "https://github.com/Debbl/starter-sass.git"
   },
   "scripts": {
-    "dev": "next dev",
+    "dev": "turbo dev",
     "i18n:extract": "lingui extract",
-    "build": "pnpm compile && next build",
-    "build:analyze": "ANALYZE=true next build",
+    "build": "turbo build",
     "start": "next start",
     "typecheck": "tsc --noEmit",
     "lint": "eslint",
@@ -29,7 +28,8 @@
     "eslint": "^9.30.1",
     "lint-staged": "^16.1.2",
     "prettier-plugin-tailwindcss": "^0.6.13",
-    "simple-git-hooks": "^2.13.0"
+    "simple-git-hooks": "^2.13.0",
+    "turbo": "^2.5.4"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
