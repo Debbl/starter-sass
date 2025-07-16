@@ -49,6 +49,14 @@ const nextConfig: NextConfig = {
             from: 'motion/react-m',
             imports: [['*', 'motion']],
           },
+          {
+            from: '~/lib/orpc',
+            imports: ['orpc'],
+          },
+          {
+            from: '@tanstack/react-query',
+            imports: ['useQuery', 'useMutation'],
+          },
         ],
         dts: true,
       }),

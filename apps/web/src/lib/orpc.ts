@@ -1,18 +1,16 @@
 import { createORPCClient } from '@orpc/client'
 import { RPCLink } from '@orpc/client/fetch'
+import { createTanstackQueryUtils } from '@orpc/tanstack-query'
+import { isBrowser } from './is-browser'
 import type { RouterClient } from '@orpc/server'
 import type { Router } from '@workspace/server'
 
-const link = new RPCLink({
-  url: `${typeof window !== 'undefined' ? window.location.origin : 'http://localhost:3000'}/api`,
-  headers: async () => {
-    if (typeof window !== 'undefined') {
-      return {}
-    }
+const baseUrl = isBrowser ? window.location.origin : 'http://localhost:3000'
 
-    const { headers } = await import('next/headers')
-    return Object.fromEntries(await headers())
-  },
+const link = new RPCLink({
+  url: `${baseUrl}/api`,
 })
 
-export const orpc: RouterClient<Router> = createORPCClient(link)
+const client: RouterClient<Router> = createORPCClient(link)
+
+export const orpc = createTanstackQueryUtils(client)

@@ -2,15 +2,17 @@ import { setI18n } from '@lingui/react/server'
 import { domMax, LazyMotion } from 'motion/react'
 import { ThemeProvider } from 'next-themes'
 import { getI18nInstance } from '~/i18n'
-import ProvidersClient from './index.client'
+import { LinguiClientProvider } from './client/lingui-client-provider'
+import { QueryClientProvider } from './client/query-client-provider'
 import type { SupportedLocales } from '~/i18n/config'
 
-export interface ProvidersProps {
+export async function Providers({
+  lang,
+  children,
+}: {
   lang: SupportedLocales
   children: React.ReactNode
-}
-
-export async function Providers({ lang, children }: ProvidersProps) {
+}) {
   const i18n = await getI18nInstance(lang)
   setI18n(i18n)
 
@@ -21,11 +23,17 @@ export async function Providers({ lang, children }: ProvidersProps) {
       enableSystem
       disableTransitionOnChange
     >
-      <ProvidersClient lang={lang}>
-        <LazyMotion strict features={domMax}>
-          {children}
-        </LazyMotion>
-      </ProvidersClient>
+      <LinguiClientProvider
+        locale={i18n.locale}
+        locales={i18n.locales as SupportedLocales}
+        messages={i18n.messages}
+      >
+        <QueryClientProvider>
+          <LazyMotion strict features={domMax}>
+            {children}
+          </LazyMotion>
+        </QueryClientProvider>
+      </LinguiClientProvider>
     </ThemeProvider>
   )
 }

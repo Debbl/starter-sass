@@ -5,12 +5,7 @@ import { orpc } from '~/lib/orpc'
 import { Counter } from './counter'
 
 export default function Home() {
-  useEffect(() => {
-    orpc.hi().then((res) => {
-      // eslint-disable-next-line no-console
-      console.log(res)
-    })
-  }, [])
+  const { data } = useQuery(orpc.hi.queryOptions())
 
   return (
     <main className='flex h-full flex-col items-center justify-center gap-y-4'>
@@ -19,6 +14,8 @@ export default function Home() {
         whileHover={{ scale: 1.1, rotate: '360deg' }}
       />
       <Counter />
+
+      <p>{data}</p>
 
       <ThemeSwitcher />
       <LangSwitcher />

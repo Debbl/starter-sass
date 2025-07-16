@@ -6,10 +6,7 @@ const handler = new RPCHandler(router)
 async function handleRequest(request: Request) {
   const { response } = await handler.handle(request, {
     prefix: '/api',
-    context: {}, // Provide initial context if needed
   })
-  // eslint-disable-next-line no-console
-  console.log('🚀 ~ handleRequest ~ response:', response)
 
   return response ?? new Response('Not found', { status: 404 })
 }

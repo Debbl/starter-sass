@@ -2,19 +2,19 @@
 import { setupI18n } from '@lingui/core'
 import { I18nProvider } from '@lingui/react'
 import { useState } from 'react'
-import type { Messages } from '@lingui/core'
+import type { Locale, Messages } from '@lingui/core'
 import type { SupportedLocales } from '~/i18n/config'
 
 export function LinguiClientProvider({
-  children,
   locale,
   locales,
   messages,
+  children,
 }: {
-  children: React.ReactNode
-  locale: string
-  locales?: SupportedLocales
+  locale: Locale
+  locales: SupportedLocales
   messages: Messages
+  children: React.ReactNode
 }) {
   const [i18n] = useState(() =>
     setupI18n({
