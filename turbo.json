@@ -3,6 +3,8 @@
   "tasks": {
     "build": {},
     "dev": {},
-    "i18n:extract": {}
+    "i18n:extract": {},
+    "db:gen": {},
+    "db:migrate": {}
   }
 }

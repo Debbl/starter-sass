@@ -1,5 +1,5 @@
 {
-  "name": "@workspace/server",
+  "name": "@workspace/env",
   "type": "module",
   "version": "0.0.0",
   "private": true,
@@ -20,23 +20,16 @@
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "dev": "tsdown --watch",
     "build": "tsdown",
-    "db:gen": "drizzle-kit generate",
-    "db:migrate": "drizzle-kit migrate",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@libsql/client": "^0.15.9",
-    "@lingui/core": "catalog:",
-    "@orpc/server": "catalog:",
-    "@workspace/env": "workspace:*",
-    "drizzle-orm": "^0.44.3",
+    "@t3-oss/env-core": "^0.13.8",
+    "dotenv": "^17.2.0",
     "zod": "catalog:"
   },
   "devDependencies": {
     "@types/node": "catalog:",
-    "drizzle-kit": "^0.31.4",
     "tsdown": "catalog:",
     "typescript": "catalog:"
   }
