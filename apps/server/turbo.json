@@ -8,8 +8,8 @@
       "outputs": ["dist/**"]
     },
     "dev": {
-      "dependsOn": ["^build"],
-      "inputs": ["src/**"],
+      "dependsOn": ["^build", "build"],
+      "cache": false,
       "persistent": true
     },
     "db:gen": {
