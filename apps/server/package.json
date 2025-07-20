@@ -28,7 +28,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@libsql/client": "^0.15.9",
+    "@libsql/client": "^0.15.10",
     "@lingui/core": "catalog:",
     "@orpc/server": "catalog:",
     "@workspace/env": "workspace:*",

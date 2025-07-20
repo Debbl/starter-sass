@@ -3,20 +3,20 @@
   "extends": ["//"],
   "tasks": {
     "build": {
-      "inputs": ["src/**", ".env"],
+      "dependsOn": ["^build"],
+      "inputs": ["src/**"],
       "outputs": ["dist/**"]
     },
     "dev": {
-      "inputs": ["$TURBO_DEFAULT$", ".env"],
+      "dependsOn": ["^build"],
+      "inputs": ["src/**"],
       "persistent": true
     },
     "db:gen": {
-      "inputs": ["$TURBO_DEFAULT$", ".env"],
-      "dependsOn": ["@workspace/env#build"]
+      "dependsOn": ["^build"]
     },
     "db:migrate": {
-      "inputs": ["$TURBO_DEFAULT$", ".env"],
-      "dependsOn": ["@workspace/env#build"]
+      "dependsOn": ["^build"]
     }
   }
 }
