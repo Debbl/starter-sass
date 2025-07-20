@@ -24,8 +24,7 @@
     "build": "tsdown",
     "db:gen": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
-    "db:studio": "drizzle-kit studio",
-    "typecheck": "tsc --noEmit"
+    "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
     "@libsql/client": "^0.15.10",
