@@ -3,7 +3,7 @@ import path from 'node:path'
 import { createEnv } from '@t3-oss/env-core'
 import { z } from 'zod'
 
-const isDev = process.env.NODE_ENV === 'development'
+const isDev = true
 
 export const env = createEnv({
   server: {
