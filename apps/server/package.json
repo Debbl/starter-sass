@@ -31,6 +31,7 @@
     "@lingui/core": "catalog:",
     "@orpc/server": "catalog:",
     "@workspace/env": "workspace:*",
+    "better-auth": "catalog:",
     "better-sqlite3": "^12.2.0",
     "drizzle-orm": "^0.44.3",
     "react": "catalog:",
@@ -39,6 +40,7 @@
   "devDependencies": {
     "@types/better-sqlite3": "^7.6.13",
     "@types/node": "catalog:",
+    "@types/react": "catalog:",
     "drizzle-kit": "^0.31.4",
     "tsdown": "catalog:",
     "typescript": "catalog:"

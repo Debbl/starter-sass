@@ -1,9 +1,18 @@
 import { RPCHandler } from '@orpc/server/fetch'
-import { router } from '@workspace/server'
+import { auth, router } from '@workspace/server'
 
 const handler = new RPCHandler(router)
 
 async function handleRequest(request: Request) {
+  const url = new URL(request.url)
+  if (url.pathname.startsWith('/api/auth')) {
+    const handler = auth.authHandler()
+
+    return request.method === 'GET'
+      ? handler.GET(request)
+      : handler.POST(request)
+  }
+
   const { response } = await handler.handle(request, {
     prefix: '/api',
   })

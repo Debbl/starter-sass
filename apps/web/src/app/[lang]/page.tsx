@@ -1,7 +1,7 @@
 'use client'
 import { LangSwitcher } from '~/components/lang-switcher'
 import { ThemeSwitcher } from '~/components/theme-switcher'
-import { orpc } from '~/lib/orpc'
+import { signIn } from '~/lib/auth-client'
 import Counter from '../components/counter'
 
 export default function Home() {
@@ -17,6 +17,17 @@ export default function Home() {
 
       <p>{data}</p>
 
+      <button
+        type='button'
+        onClick={() =>
+          signIn.social({
+            provider: 'github',
+            callbackURL: '/dashboard',
+          })
+        }
+      >
+        Sign in
+      </button>
       <ThemeSwitcher />
       <LangSwitcher />
     </main>
