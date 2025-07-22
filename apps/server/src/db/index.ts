@@ -5,6 +5,9 @@ import { cache } from 'react'
 import * as schema from './schema'
 
 export const getDB = cache(() => {
-  const client = new Database(env.DB_FILE_NAME)
+  const client = new Database(env.DB_FILE_NAME, {
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    nativeBinding: require('better-sqlite3/build/Release/better_sqlite3.node'),
+  })
   return drizzle({ client, schema })
 })

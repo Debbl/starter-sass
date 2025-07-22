@@ -6,7 +6,29 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: en\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
 
-#: src/app/(main)/Counter.tsx:13
+#: src/components/theme-switcher.tsx:16
+msgid "Dark"
+msgstr "Dark"
+
+#: src/app/components/counter.tsx:12
 msgid "Hi"
 msgstr "Hi"
+
+#: src/components/theme-switcher.tsx:19
+msgid "Light"
+msgstr "Light"
+
+#: src/app/[lang]/page.tsx:30
+msgid "Sign in"
+msgstr "Sign in"
+
+#: src/components/theme-switcher.tsx:13
+msgid "System"
+msgstr "System"

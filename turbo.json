@@ -2,12 +2,26 @@
   "$schema": "https://turborepo.com/schema.json",
   "globalDependencies": [".env"],
   "tasks": {
-    "build": {},
-    "dev": {},
-    "i18n:extract": {},
-    "db:gen": {},
-    "db:migrate": {},
-    "db:studio": {},
-    "typecheck": {}
+    "build": {
+      "outputLogs": "new-only"
+    },
+    "dev": {
+      "outputLogs": "new-only"
+    },
+    "i18n:extract": {
+      "outputLogs": "new-only"
+    },
+    "db:gen": {
+      "outputLogs": "new-only"
+    },
+    "db:migrate": {
+      "outputLogs": "new-only"
+    },
+    "db:studio": {
+      "outputLogs": "new-only"
+    },
+    "typecheck": {
+      "outputLogs": "new-only"
+    }
   }
 }
