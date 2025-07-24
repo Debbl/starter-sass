@@ -6,6 +6,7 @@
 // biome-ignore lint: disable
 export {}
 declare global {
+  const Link: typeof import('~/i18n/navigation')['Link']
   const cn: typeof import('twl')['cn']
   const createRef: typeof import('react')['createRef']
   const forwardRef: typeof import('react')['forwardRef']
@@ -25,9 +26,11 @@ declare global {
   const useLayoutEffect: typeof import('react')['useLayoutEffect']
   const useMemo: typeof import('react')['useMemo']
   const useMutation: typeof import('@tanstack/react-query')['useMutation']
+  const usePathname: typeof import('~/i18n/navigation')['usePathname']
   const useQuery: typeof import('@tanstack/react-query')['useQuery']
   const useReducer: typeof import('react')['useReducer']
   const useRef: typeof import('react')['useRef']
+  const useRouter: typeof import('~/i18n/navigation')['useRouter']
   const useState: typeof import('react')['useState']
   const useSyncExternalStore: typeof import('react')['useSyncExternalStore']
   const useTransition: typeof import('react')['useTransition']
