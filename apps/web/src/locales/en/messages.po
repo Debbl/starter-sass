@@ -25,9 +25,13 @@ msgstr "Hi"
 msgid "Light"
 msgstr "Light"
 
-#: src/app/[lang]/page.tsx:30
+#: src/app/[lang]/page.tsx:34
 msgid "Sign in"
 msgstr "Sign in"
+
+#: src/app/[lang]/page.tsx:38
+msgid "Sign out"
+msgstr "Sign out"
 
 #: src/components/theme-switcher.tsx:13
 msgid "System"

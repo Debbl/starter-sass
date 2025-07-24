@@ -1,9 +1,9 @@
 import { defineConfig } from '@lingui/cli'
+import { linguiConfig } from './src/i18n/config'
 
 export default defineConfig({
-  // async from apps/web/src/i18n/config.ts
-  sourceLocale: 'en',
-  locales: ['en', 'zh'],
+  sourceLocale: linguiConfig.sourceLocale,
+  locales: [...linguiConfig.locales],
   catalogs: [
     {
       path: '<rootDir>/src/locales/{locale}/messages',

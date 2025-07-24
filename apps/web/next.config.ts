@@ -58,12 +58,14 @@ const nextConfig: NextConfig = {
             from: '@tanstack/react-query',
             imports: ['useQuery', 'useMutation'],
           },
+          {
+            from: '~/i18n/navigation',
+            imports: ['Link', 'usePathname', 'useRouter'],
+          },
         ],
         dts: true,
       }),
     )
-
-    // config.watchOptions.ignored = [/node_modules([\\]+|\/)+(?!@workspace)/]
 
     return config
   },

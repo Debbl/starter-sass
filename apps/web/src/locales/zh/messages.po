@@ -25,9 +25,13 @@ msgstr "你好"
 msgid "Light"
 msgstr "亮色"
 
-#: src/app/[lang]/page.tsx:30
+#: src/app/[lang]/page.tsx:34
 msgid "Sign in"
 msgstr "登录"
+
+#: src/app/[lang]/page.tsx:38
+msgid "Sign out"
+msgstr "退出"
 
 #: src/components/theme-switcher.tsx:13
 msgid "System"
