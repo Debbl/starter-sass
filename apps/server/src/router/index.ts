@@ -1,7 +1,19 @@
+import { t } from '@lingui/core/macro'
 import { os } from '@orpc/server'
+import { cookies, headers } from 'next/headers'
+import { requiredLocaleMiddleware } from '~/middlewares/locale'
 
-const hi = os.handler(async () => {
-  return `hi`
+export const base = os.use(async ({ next }) =>
+  next({
+    context: {
+      headers: await headers(),
+      cookies: await cookies(),
+    },
+  }),
+)
+
+const hi = base.use(requiredLocaleMiddleware).handler(async () => {
+  return t`hi`
 })
 
 export const router = {

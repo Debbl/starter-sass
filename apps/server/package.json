@@ -24,20 +24,28 @@
     "build": "tsdown",
     "db:gen": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
-    "db:studio": "drizzle-kit studio"
+    "db:studio": "drizzle-kit studio",
+    "i18n:extract": "lingui extract",
+    "i18n:compile": "lingui compile"
   },
   "dependencies": {
     "@libsql/client": "^0.15.10",
     "@lingui/core": "catalog:",
     "@orpc/server": "catalog:",
     "@workspace/env": "workspace:*",
+    "@workspace/shared": "workspace:*",
     "better-auth": "catalog:",
     "better-sqlite3": "^12.2.0",
     "drizzle-orm": "^0.44.3",
+    "next": "catalog:",
     "react": "catalog:",
     "zod": "catalog:"
   },
   "devDependencies": {
+    "@lingui/cli": "catalog:",
+    "@lingui/core": "catalog:",
+    "@lingui/swc-plugin": "catalog:",
+    "@rollup/plugin-swc": "^0.4.0",
     "@types/better-sqlite3": "^7.6.13",
     "@types/node": "catalog:",
     "@types/react": "catalog:",

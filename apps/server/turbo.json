@@ -2,8 +2,18 @@
   "$schema": "https://turborepo.com/schema.json",
   "extends": ["//"],
   "tasks": {
-    "build": {
+    "i18n:extract": {
       "dependsOn": ["^build"],
+      "inputs": ["src/**"],
+      "outputs": ["src/locales"]
+    },
+    "i18n:compile": {
+      "dependsOn": ["i18n:extract"],
+      "inputs": ["src/**"],
+      "outputs": ["src/locales"]
+    },
+    "build": {
+      "dependsOn": ["^build", "i18n:compile"],
       "inputs": ["src/**"],
       "outputs": ["dist/**"]
     },

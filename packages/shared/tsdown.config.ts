@@ -1,4 +1,3 @@
-import swc from '@rollup/plugin-swc'
 import { defineConfig } from 'tsdown'
 
 export default defineConfig({
@@ -8,6 +7,4 @@ export default defineConfig({
   },
   exports: true,
   sourcemap: true,
-  treeshake: true,
-  plugins: [swc()],
 })
