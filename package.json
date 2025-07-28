@@ -18,7 +18,7 @@
     "i18n:extract": "turbo i18n:extract",
     "db:gen": "turbo db:gen",
     "db:migrate": "turbo db:migrate",
-    "typecheck": "turbo typecheck",
+    "typecheck": "turbo typecheck --filter=@workspace/web",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "prepare": "simple-git-hooks"

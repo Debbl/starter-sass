@@ -13,6 +13,6 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/router/index.ts:16
+#: src/router/index.ts:10
 msgid "hi"
 msgstr "hi"

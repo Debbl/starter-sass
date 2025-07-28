@@ -21,6 +21,7 @@
       "outputLogs": "new-only"
     },
     "typecheck": {
+      "dependsOn": ["^build"],
       "outputLogs": "new-only"
     }
   }
