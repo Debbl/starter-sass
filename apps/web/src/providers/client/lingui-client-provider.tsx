@@ -3,7 +3,7 @@ import { setupI18n } from '@lingui/core'
 import { I18nProvider } from '@lingui/react'
 import { useState } from 'react'
 import type { Locale, Messages } from '@lingui/core'
-import type { SupportedLocales } from '~/i18n/config'
+import type { SupportedLocales } from '@workspace/shared'
 
 export function LinguiClientProvider({
   locale,
@@ -19,7 +19,7 @@ export function LinguiClientProvider({
   const [i18n] = useState(() =>
     setupI18n({
       locale,
-      locales,
+      locales: [...locales],
       messages: { [locale]: messages },
     }),
   )

@@ -4,13 +4,13 @@ import { ThemeProvider } from 'next-themes'
 import { getI18nInstance } from '~/i18n'
 import { LinguiClientProvider } from './client/lingui-client-provider'
 import { QueryClientProvider } from './client/query-client-provider'
-import type { SupportedLocales } from '~/i18n/config'
+import type { SupportedLocale, SupportedLocales } from '@workspace/shared'
 
 export async function Providers({
   lang,
   children,
 }: {
-  lang: SupportedLocales
+  lang: SupportedLocale
   children: React.ReactNode
 }) {
   const i18n = await getI18nInstance(lang)
@@ -25,7 +25,7 @@ export async function Providers({
     >
       <LinguiClientProvider
         locale={i18n.locale}
-        locales={i18n.locales as SupportedLocales}
+        locales={i18n.locales as unknown as SupportedLocales}
         messages={i18n.messages}
       >
         <QueryClientProvider>

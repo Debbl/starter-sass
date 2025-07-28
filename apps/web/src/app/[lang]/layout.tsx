@@ -1,7 +1,7 @@
 import { linguiConfig } from '~/i18n/config'
 import { Providers } from '~/providers'
+import type { SupportedLocale } from '@workspace/shared'
 import type { Metadata } from 'next'
-import type { SupportedLocales } from '~/i18n/config'
 
 export function generateStaticParams() {
   return linguiConfig.locales.map((locale) => ({ lang: locale }))
@@ -49,7 +49,7 @@ export default async function Layout({
   params,
 }: {
   children: React.ReactNode
-  params: Promise<{ lang: SupportedLocales }>
+  params: Promise<{ lang: SupportedLocale }>
 }) {
   const { lang } = await params
 
