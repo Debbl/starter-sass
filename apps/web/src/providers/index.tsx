@@ -7,13 +7,13 @@ import { QueryClientProvider } from './client/query-client-provider'
 import type { SupportedLocale, SupportedLocales } from '@workspace/shared'
 
 export async function Providers({
-  lang,
+  locale,
   children,
 }: {
-  lang: SupportedLocale
+  locale: SupportedLocale
   children: React.ReactNode
 }) {
-  const i18n = await getI18nInstance(lang)
+  const i18n = await getI18nInstance(locale)
   setI18n(i18n)
 
   return (

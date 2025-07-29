@@ -4,7 +4,7 @@ import type { SupportedLocale } from '@workspace/shared'
 import type { Metadata } from 'next'
 
 export function generateStaticParams() {
-  return linguiConfig.locales.map((locale) => ({ lang: locale }))
+  return linguiConfig.locales.map((locale) => ({ locale }))
 }
 
 export const metadata: Metadata = {
@@ -49,14 +49,14 @@ export default async function Layout({
   params,
 }: {
   children: React.ReactNode
-  params: Promise<{ lang: SupportedLocale }>
+  params: Promise<{ locale: SupportedLocale }>
 }) {
-  const { lang } = await params
+  const { locale } = await params
 
   return (
-    <html lang={lang} suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <body>
-        <Providers lang={lang}>{children}</Providers>
+        <Providers locale={locale}>{children}</Providers>
       </body>
     </html>
   )
