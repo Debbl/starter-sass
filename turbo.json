@@ -11,9 +11,6 @@
     "i18n:extract": {
       "outputLogs": "new-only"
     },
-    "i18n:compile": {
-      "outputLogs": "new-only"
-    },
     "db:gen": {
       "outputLogs": "new-only"
     },

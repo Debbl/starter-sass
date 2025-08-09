@@ -26,7 +26,6 @@
     "db:migrate": "drizzle-kit migrate",
     "db:studio": "drizzle-kit studio",
     "i18n:extract": "lingui extract",
-    "i18n:compile": "lingui compile",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
@@ -52,6 +51,7 @@
     "@types/react": "catalog:",
     "drizzle-kit": "^0.31.4",
     "tsdown": "catalog:",
-    "typescript": "catalog:"
+    "typescript": "catalog:",
+    "unplugin-lingui": "^0.0.2"
   }
 }

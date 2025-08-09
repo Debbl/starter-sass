@@ -25,11 +25,11 @@ msgstr "Hi"
 msgid "Light"
 msgstr "Light"
 
-#: src/app/[lang]/page.tsx:34
+#: src/app/[locale]/page.tsx:34
 msgid "Sign in"
 msgstr "Sign in"
 
-#: src/app/[lang]/page.tsx:38
+#: src/app/[locale]/page.tsx:38
 msgid "Sign out"
 msgstr "Sign out"
 

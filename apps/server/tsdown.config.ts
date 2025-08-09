@@ -1,5 +1,6 @@
 import swc from '@rollup/plugin-swc'
 import { defineConfig } from 'tsdown'
+import lingui from 'unplugin-lingui/rolldown'
 
 export default defineConfig({
   entry: 'src/index.ts',
@@ -9,5 +10,5 @@ export default defineConfig({
   exports: true,
   sourcemap: true,
   treeshake: true,
-  plugins: [swc()],
+  plugins: [lingui(), swc()],
 })

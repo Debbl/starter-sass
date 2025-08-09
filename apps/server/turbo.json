@@ -7,13 +7,8 @@
       "inputs": ["src/**"],
       "outputs": ["src/locales"]
     },
-    "i18n:compile": {
-      "dependsOn": ["i18n:extract"],
-      "inputs": ["src/**"],
-      "outputs": ["src/locales"]
-    },
     "build": {
-      "dependsOn": ["^build", "i18n:compile"],
+      "dependsOn": ["^build"],
       "inputs": ["src/**"],
       "outputs": ["dist/**"]
     },
