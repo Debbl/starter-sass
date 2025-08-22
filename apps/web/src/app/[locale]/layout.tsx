@@ -47,11 +47,8 @@ export const metadata: Metadata = {
 export default async function Layout({
   children,
   params,
-}: {
-  children: React.ReactNode
-  params: Promise<{ locale: SupportedLocale }>
-}) {
-  const { locale } = await params
+}: LayoutProps<'/[locale]'>) {
+  const { locale } = (await params) as { locale: SupportedLocale }
 
   return (
     <html lang={locale} suppressHydrationWarning>
