@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.0",
   "private": true,
-  "packageManager": "pnpm@10.15.0",
+  "packageManager": "pnpm@10.15.1",
   "description": "starter sass app",
   "author": "Brendan Dash <me@aiwna.run> (https://github.com/Debbl/)",
   "license": "MIT",
@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "@t3-oss/env-core": "^0.13.8",
-    "dotenv": "^17.2.1",
+    "dotenv": "^17.2.2",
     "zod": "catalog:"
   },
   "devDependencies": {
