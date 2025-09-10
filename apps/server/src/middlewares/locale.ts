@@ -1,20 +1,16 @@
-import { setupI18n } from '@lingui/core'
+import { i18n } from '@lingui/core'
 import { os } from '@orpc/server'
-import { SUPPORTED_LOCALES, X_NEXT_LOCALE } from '@workspace/shared'
+import { X_NEXT_LOCALE } from '@workspace/shared'
 import { cache } from 'react'
 import { messages as enMessages } from '../locales/en/messages.po'
 import { messages as zhMessages } from '../locales/zh/messages.po'
 import type { SupportedLocale } from '@workspace/shared'
 
-const getI18n = cache((locale: SupportedLocale) => {
-  return setupI18n({
-    locale,
-    locales: [...SUPPORTED_LOCALES],
-    messages: {
-      en: enMessages,
-      zh: zhMessages,
-    },
-  })
+const getMessage = cache((locale: SupportedLocale) => {
+  if (locale === 'zh') {
+    return zhMessages
+  }
+  return enMessages
 })
 
 export const requiredLocaleMiddleware = os
@@ -23,7 +19,8 @@ export const requiredLocaleMiddleware = os
     const headers = context.headers
     const locale = (headers.get(X_NEXT_LOCALE) ?? 'en') as 'en' | 'zh'
 
-    const i18n = await getI18n(locale)
+    i18n.load('en', getMessage(locale))
+    i18n.activate('en')
 
     return next({
       context: {
